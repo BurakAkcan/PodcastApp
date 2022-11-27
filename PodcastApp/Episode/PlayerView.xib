@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="PlayerView" customModule="PodcastApp" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="1v2-KG-NMv">
+                    <rect key="frame" x="16" y="44" width="382" height="802"/>
+                    <subviews>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="n0g-Ox-rFe">
+                            <rect key="frame" x="0.0" y="0.0" width="382" height="40"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="40" id="fJU-Ia-3Bu"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="15"/>
+                            <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                            <state key="normal" title="Dismiss">
+                                <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </state>
+                            <connections>
+                                <action selector="dismissButton:" destination="iN0-l3-epB" eventType="touchUpInside" id="7XS-hB-yhh"/>
+                            </connections>
+                        </button>
+                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="appicon" translatesAutoresizingMaskIntoConstraints="NO" id="Kg5-ts-p7G">
+                            <rect key="frame" x="0.0" y="40" width="382" height="382"/>
+                            <constraints>
+                                <constraint firstAttribute="width" secondItem="Kg5-ts-p7G" secondAttribute="height" id="9CO-vJ-RNh"/>
+                            </constraints>
+                        </imageView>
+                        <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="ipl-rJ-yhV">
+                            <rect key="frame" x="-2" y="422" width="386" height="37"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="36" id="q0B-I6-IOa"/>
+                            </constraints>
+                        </slider>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="EpisodeTitle" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VhI-QU-gMt">
+                            <rect key="frame" x="0.0" y="458" width="382" height="344"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                </stackView>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="1v2-KG-NMv" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" id="0PV-bp-gQE"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="1v2-KG-NMv" secondAttribute="bottom" constant="16" id="M26-pG-ZhX"/>
+                <constraint firstItem="1v2-KG-NMv" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="16" id="MBV-iT-wlJ"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="1v2-KG-NMv" secondAttribute="trailing" constant="16" id="fLq-Dj-aNA"/>
+            </constraints>
+            <connections>
+                <outlet property="episodeTitle" destination="VhI-QU-gMt" id="7JP-iC-Cto"/>
+                <outlet property="iconImageView" destination="Kg5-ts-p7G" id="8Sd-St-urE"/>
+            </connections>
+            <point key="canvasLocation" x="132" y="66"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="appicon" width="60" height="60"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
