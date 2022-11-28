@@ -31,8 +31,6 @@ extension EpisodeController: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        .sHeight*0.14
+        self.sView.tableView.frame.size.height*0.17
     }
-    
-    
 }
