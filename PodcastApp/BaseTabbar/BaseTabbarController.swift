@@ -17,8 +17,6 @@ class BaseTabbarController: UITabBarController {
         tabBar.unselectedItemTintColor = .gray.withAlphaComponent(0.4)
         setTabbars()
        
-        
-        
     }
     
     //MARK: - Helper Functions
